@@ -184,10 +184,35 @@ padding:45px 6%;
 <a href="#contact">Contact</a>
 </nav>
 </header>
-  <!-- SEARCH BOX अब PRODUCTS से पहले -->
-<section style="background:linear-gradient(135deg,#e7fbfa,#ffffff);padding:30px 7%;text-align:center;">
-...
+
+
+<!-- SEARCH BOX सबसे ऊपर -->
+<section style="background:linear-gradient(135deg,#e7fbfa,#ffffff);padding:25px 7%;text-align:center;">
+
+<h2 style="color:#08727c;font-size:28px;margin-bottom:10px;">
+🔎 Medicine / Product Search
+</h2>
+
+<p style="color:#496276;margin-bottom:18px;">
+अपनी Medicine या Product का नाम यहाँ खोजें
+</p>
+
+<div style="max-width:650px;margin:auto;">
+
+<input
+type="text"
+id="medicineSearch"
+placeholder="🔎 Medicine या Product खोजें..."
+onkeyup="searchMedicine()"
+style="width:100%;padding:17px 22px;border:2px solid #087f8c;border-radius:35px;font-size:17px;outline:none;box-shadow:0 7px 22px #087f8c25;background:white;"
+>
+
+<p id="searchMessage" style="margin-top:12px;color:#087f8c;font-weight:600;"></p>
+
+</div>
+
 </section>
+
 
 <main>
 
@@ -223,6 +248,7 @@ style="font-size:18px;padding:15px 28px;">
 </div>
 
 </section>
+
 
 <section class="hero" id="home">
 <div>
@@ -277,6 +303,7 @@ target="_blank">
 </div>
 </section>
 
+
 <section id="services">
 
 <h2 class="title">हमारी सेवाएँ</h2>
@@ -310,6 +337,7 @@ target="_blank">
 </div>
 </section>
 
+
 <section class="about" id="about">
 
 <h2 class="title">Geeta Pharma के बारे में</h2>
@@ -321,6 +349,7 @@ Geeta Pharma, Jaipur में आपका भरोसेमंद मेड�
 </p>
 
 </section>
+
 
 <section class="contact" id="contact">
 
@@ -349,6 +378,7 @@ geetapharma2002@gmail.com
 
 </div>
 </section>
+
 
 <section style="background:#fff;text-align:center;">
 
@@ -381,6 +411,7 @@ target="_blank">
 
 </section>
 
+
 <section style="background:linear-gradient(135deg,#e8fff5,#ffffff);text-align:center;">
 
 <h2 class="title">📲 WhatsApp पर Order करें</h2>
@@ -399,30 +430,6 @@ style="font-size:18px;padding:15px 28px;">
 <p style="margin-top:15px;color:#496276;">
 📞 7464913080
 </p>
-
-</section>
-
-<h2 style="color:#08727c;font-size:28px;margin-bottom:15px;">
-🔎 Medicine / Product Search
-</h2>
-
-<p style="color:#496276;margin-bottom:18px;">
-अपनी Medicine या Product का नाम यहाँ खोजें
-</p>
-
-<div style="max-width:650px;margin:auto;">
-
-<input
-type="text"
-id="medicineSearch"
-placeholder="🔎 Medicine या Product खोजें..."
-onkeyup="searchMedicine()"
-style="width:100%;padding:17px 22px;border:2px solid #087f8c;border-radius:35px;font-size:17px;outline:none;box-shadow:0 7px 22px #087f8c25;background:white;"
->
-
-<p id="searchMessage" style="margin-top:12px;color:#087f8c;font-weight:600;"></p>
-
-</div>
 
 </section>
 
@@ -531,6 +538,7 @@ style="font-size:19px;padding:15px 30px;">
 <footer>
 © 2026 Geeta Pharma • Aapka Bharosemand Medical
 </footer>
+
 
 <script>
 function searchMedicine() {
