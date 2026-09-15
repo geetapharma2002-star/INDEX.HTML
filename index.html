@@ -393,6 +393,19 @@ style="font-size:18px;padding:15px 28px;">
   <section id="products" style="background:#f5fbff;">
 
 <h2 class="title">💊 हमारे Products</h2>
+    <div style="max-width:650px;margin:0 auto 30px;text-align:center;">
+
+<input
+type="text"
+id="medicineSearch"
+placeholder="🔎 Medicine या Product खोजें..."
+onkeyup="searchMedicine()"
+style="width:100%;padding:16px 20px;border:2px solid #087f8c;border-radius:30px;font-size:17px;outline:none;box-shadow:0 5px 18px #087f8c20;"
+>
+
+<p id="searchMessage" style="margin-top:12px;color:#087f8c;font-weight:600;"></p>
+
+</div>
 
 <p style="text-align:center;max-width:700px;margin:-15px auto 30px;color:#496276;font-size:17px;">
 अपनी जरूरत के अनुसार Medicine और Healthcare Products के लिए हमसे WhatsApp पर संपर्क करें।
@@ -487,6 +500,37 @@ style="font-size:19px;padding:15px 30px;">
 <footer>
 © 2026 Geeta Pharma • Aapka Bharosemand Medical
 </footer>
+<script>
+function searchMedicine() {
 
+let input = document.getElementById("medicineSearch").value.toLowerCase().trim();
+let cards = document.querySelectorAll("#products .card");
+let found = 0;
+
+cards.forEach(function(card) {
+
+let text = card.innerText.toLowerCase();
+
+if (input === "" || text.includes(input)) {
+card.style.display = "";
+found++;
+} else {
+card.style.display = "none";
+}
+
+});
+
+let message = document.getElementById("searchMessage");
+
+if (input !== "" && found === 0) {
+message.innerHTML = "❌ यह Product अभी हमारी list में नहीं मिला। WhatsApp पर पूछें।";
+} else if (input !== "") {
+message.innerHTML = "✅ " + found + " Product/Category मिली।";
+} else {
+message.innerHTML = "";
+}
+
+}
+</script>
 </body>
 </html>
