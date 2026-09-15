@@ -164,6 +164,94 @@ section{
 padding:45px 6%;
 }
 }
+  <style>
+
+/* ===== PREMIUM HERO DESIGN ===== */
+
+.hero{
+position:relative;
+overflow:hidden;
+padding:80px 7% !important;
+background:linear-gradient(135deg,#e7fbfa 0%,#ffffff 48%,#eaf5ff 100%) !important;
+border-bottom:1px solid #dceff1;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:280px;
+height:280px;
+border-radius:50%;
+background:#0a8f7a18;
+top:-100px;
+right:-80px;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+border-radius:50%;
+background:#536dfe12;
+bottom:-100px;
+left:-70px;
+}
+
+.hero > div{
+position:relative;
+z-index:2;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.hero h1{
+font-size:clamp(42px,7vw,72px) !important;
+font-weight:800 !important;
+letter-spacing:.5px;
+margin:10px 0 15px !important;
+background:linear-gradient(90deg,#087f8c,#0a8f7a,#3949ab);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:19px !important;
+line-height:1.7;
+color:#496276;
+max-width:700px;
+margin:0 auto 25px;
+}
+
+.hero a{
+display:inline-block;
+transition:.25s ease;
+}
+
+.hero a:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px #087f8c30;
+}
+
+@media(max-width:600px){
+
+.hero{
+padding:55px 6% !important;
+}
+
+.hero h1{
+font-size:42px !important;
+}
+
+.hero p{
+font-size:16px !important;
+}
+
+}
+
+</style>
+  
 </style>
 </head>
 
