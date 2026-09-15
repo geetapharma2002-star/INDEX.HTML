@@ -584,7 +584,66 @@ style="font-size:19px;padding:15px 30px;">
 </div>
 
 </section>
+<!-- ORDER / ENQUIRY SECTION -->
+<section id="order" style="background:linear-gradient(135deg,#e8fbfa,#ffffff);padding:60px 7%;text-align:center;">
 
+<h2 class="title">🛒 Order / Enquiry</h2>
+
+<p style="font-size:18px;color:#496276;margin-bottom:25px;">
+अपनी Medicine या Product की जानकारी भेजें
+</p>
+
+<div style="max-width:700px;margin:auto;background:white;padding:25px;border-radius:20px;box-shadow:0 10px 30px #087f8c20;">
+
+<input type="text" id="customerName" placeholder="👤 आपका नाम"
+style="width:100%;padding:15px;margin-bottom:15px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;">
+
+<input type="text" id="customerMedicine" placeholder="💊 Medicine / Product का नाम"
+style="width:100%;padding:15px;margin-bottom:15px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;">
+
+<input type="text" id="customerPhone" placeholder="📞 आपका Mobile Number"
+style="width:100%;padding:15px;margin-bottom:15px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;">
+
+<textarea id="customerMessage" placeholder="📝 अपनी जरूरत यहाँ लिखें..." rows="4"
+style="width:100%;padding:15px;margin-bottom:20px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;resize:none;"></textarea>
+
+<button onclick="sendWhatsAppOrder()"
+style="width:100%;padding:16px;background:#0a8f7a;color:white;border:none;border-radius:30px;font-size:18px;font-weight:700;cursor:pointer;">
+📲 WhatsApp पर भेजें
+</button>
+
+</div>
+
+</section>
+
+<script>
+function sendWhatsAppOrder() {
+
+let name = document.getElementById("customerName").value.trim();
+let medicine = document.getElementById("customerMedicine").value.trim();
+let phone = document.getElementById("customerPhone").value.trim();
+let message = document.getElementById("customerMessage").value.trim();
+
+if(name === "" || medicine === "") {
+alert("कृपया अपना नाम और Medicine / Product का नाम भरें।");
+return;
+}
+
+let whatsappMessage =
+"नमस्ते Geeta Pharma,%0A%0A" +
+"नाम: " + encodeURIComponent(name) + "%0A" +
+"Medicine/Product: " + encodeURIComponent(medicine) + "%0A" +
+"Mobile: " + encodeURIComponent(phone) + "%0A" +
+"Message: " + encodeURIComponent(message);
+
+window.open(
+"https://wa.me/917464913080?text=" + whatsappMessage,
+"_blank"
+);
+
+}
+</script>
+  
 </main>
 
 <footer>
